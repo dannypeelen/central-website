@@ -1,12 +1,16 @@
 "use client";
 import { useState } from "react";
+import slide1 from "../img/IMG_6851.JPG";
+import slide2 from "../img/IMG_6290.jpg";
+import slide3 from "../img/IMG_8503.JPG";
+import slide4 from "../img/IMG_7624.jpg";
 
 export default function Home() {
     const images = [
-        "../img/IMG_6851.JPG",
-        "../img/IMG_6290.jpg",
-        "../img/IMG_8503.JPG",
-        "../img/IMG_7624.jpg"
+        slide1,
+        slide2,
+        slide3,
+        slide4
     ];
 
     const [currSlide, setCurrSlide] = useState(0);
