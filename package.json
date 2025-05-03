@@ -15,7 +15,7 @@
   "dependencies": {
     "amplify": "^0.0.11",
     "aws-amplify": "^6.14.4",
-    "bootstrap": "^5.3.3",
+    "bootstrap": "^5.3.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -41,6 +41,6 @@
     "vite": "^6.2.0"
   },
   "engines": {
-    "node": ">=20"  
+    "node": ">=20"
   }
 }
