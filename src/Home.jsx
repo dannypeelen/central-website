@@ -49,8 +49,8 @@ export default function App(){
                 <b>Topics: Data Science, PyTorch, APIs</b>
             </div>
             <div class="project">
-                <h4>Isabella Delahunty Website</h4>
-                <p><a href="https://github.com/dannypeelen/isa-web"><i class="bi bi-github"></i></a> <i>April 2025</i></p>
+                <h4><a href="https://iloveisa.dannypeelen.com">Isabella Delahunty Website</a></h4>
+                <p><a href="https://iloveisa.dannypeelen.com"><i class="bi bi-github"></i></a> <i>April 2025</i></p>
                 <hr/>
                 <p>For my girlfriend, Isa's, graduation and eventual departure to London to grad school, I built her a little website with a little photo gallery and a daily compliment for her found <a href="https://www.iloveisa.com">here.</a></p>
                 <b>Topics: React (JavaScript), CSS, AWS</b>
