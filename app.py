@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, requests, send_file
+from flask import Flask, jsonify, request, send_file
 from flask_cors import CORS
 import requests, re, os, json
 import genanki
@@ -37,7 +37,7 @@ def search(topic, params={"searchType":"answer", "difficulties": [3,4,5], "minYe
 
     return questions
 
-def generate_cards(questions, topic, max_clues=15):
+def generate_cards(questions, max_clues=15):
     if not flashcarder:
         print("no model exists")
         return []
@@ -112,12 +112,53 @@ def create_deck(flashcards, topic):
 
 @app.route('/api/generate-flashcards', methods=['POST'])
 def generate_flashcards():
-    print("hi")
+    data = request.json
+    topic = data.get('topic', '').strip()
+
+    if not topic:
+        return jsonify({'error': 'topic is needed'}), 400
+
+    try:
+        questions = search(topic, limit=15)
+        if not questions:
+            return jsonify({'error': 'no questions found on this topic'}), 404
+        
+        clues = generate_cards(questions)
+
+        #make flashcard data
+        flashcards = [{'front': clue, 'back': topic} for clue in clues]
+        
+        return jsonify({
+            'flashcards': flashcards,
+            'topic': topic,
+            'total_questions_found': len(questions)
+        })
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
 
 @app.route('api/download-deck', methods=['POST'])
 def download_deck():
-    print("hi")
+    data = request.json
+    topic = data.get('topic', '').strip()
+    clues = data.get('clues', [])
+
+    if not topic or not clues:
+        return jsonify({'error': 'Topic and clues are needed'}), 400
     
+    try:
+        deck_file = create_deck(clues, topic)
+        
+        return send_file(
+            deck_file,
+            as_attachment=True,
+            download_name=f'{topic.replace(" ", "_")}_flashcards.apkg',
+            mimetype='application/octet-stream'
+        )
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
 @app.route('/health', methods=['GET'])
 def health_check():
     return jsonify({'status': 'healthy'})
