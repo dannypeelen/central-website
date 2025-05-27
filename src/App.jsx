@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Search, Download, RotateCcw, BookOpen } from 'lucide-react';
+import './index.css'
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -97,12 +98,12 @@ function App() {
       </header>
 
       {/* Search Bar */}
-      <div className="px-4 sm:px-6 lg:px-8">
+      <div className="px-4 sm:px-6 lg:px-8 expand-item">
         <main className="bg-white rounded-xl shadow-lg p-6 mb-8 my-3">
           <div className="flex gap-4 mb-4">
             <div className="flex-1">
             <input type="text"
-                  placeholder="Enter your topic (e.g., World War II, Photosynthesis, Shakespeare)"
+                  placeholder="Enter any topic (e.g., Athol Fugard, Kyrgyzstan, Torque, etc.)"
                   value={topic}
                   onChange={(e) => setTopic(e.target.value)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-lg"
@@ -130,7 +131,7 @@ function App() {
 
       {/* Extra Info Block */}
       {flashcards.length === 0 && !isLoading && (
-          <div className="px-4 sm:px-6 lg:px-8">
+          <div className="px-4 sm:px-6 lg:px-8 expand-item">
             <div className="bg-white rounded-xl shadow-lg p-8 text-center">
               <BookOpen className="mx-auto text-gray-400 mb-4" size={48} />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -139,9 +140,9 @@ function App() {
               <p className="text-gray-600 mb-4">
                 Enter any academic topic to generate AI-powered flashcards from quiz bowl questions
               </p>
-              <div className="text-sm text-gray-500">
-                <p>• Questions sourced from QBReader.org</p>
-                <p>• Clues generated using fine-tuned AI</p>
+              <div className="text-sm text-gray-500 font-bold">
+                <p>• Questions sourced from QBReader's API</p>
+                <p>• Clues generated using fine-tuned <a href="https://huggingface.co/dpeelen9/flashcarder">model</a></p>
                 <p>• Download as Anki-compatible .apkg files</p>
               </div>
             </div>
