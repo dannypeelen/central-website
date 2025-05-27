@@ -84,30 +84,69 @@ function App() {
   };
 
   return (
-    <div className="">
-      <header className="">
-        <div>
-          <h1></h1>
-          <p></p>
+    /* Header */
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-col">
+      <header className="bg-indigo-600 text-white p-6">
+        <div className="max-w-4xl mx-auto float-left">
+          <h1 className="text-3xl font-bold ">AnkiMate</h1>
+          <p className="mt-2 text-indigo-100">Generate smarter.</p>
+        </div>
+        <div className="float-right my-2">
+            <i className="text-3xl bi bi-github"></i>
         </div>
       </header>
 
-      <main className="">
-        <div className="">
-          <input type="text"
-          value={topic}
-          onChange={(e) => setTopic(e)}
-          placeholder="Enter a topic (e.g. 'Athol Fugard', 'Kyrgyzstan')"
-          className=""
-          disabled="isLoading"
-          />
-          {isLoading && (
-                <div className="absolute right-3 top-3 text-gray-400">
-                  <Loader2 className="animate-spin" size={20} />
-                </div>
-              )}
-        </div>
-      </main>
+      {/* Search Bar */}
+      <div className="px-4 sm:px-6 lg:px-8">
+        <main className="bg-white rounded-xl shadow-lg p-6 mb-8 my-3">
+          <div className="flex gap-4 mb-4">
+            <div className="flex-1">
+            <input type="text"
+                  placeholder="Enter your topic (e.g., World War II, Photosynthesis, Shakespeare)"
+                  value={topic}
+                  onChange={(e) => setTopic(e.target.value)}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-lg"
+            />
+            </div>
+            <button
+            onClick={generateFlashcards}
+            disabled={isLoading}
+            className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 focus:border-transparent text-medium flex items-center"
+            >
+              {isLoading ? (
+                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                ) : (
+                  <Search size={20} />)}
+              {isLoading ? 'Generating...' : 'Generate'}
+            </button>
+          </div>
+        </main>
+      </div>
+
+      {/* Results section */}
+      <div>
+
+      </div>
+
+      {/* Extra Info Block */}
+      {flashcards.length === 0 && !isLoading && (
+          <div className="px-4 sm:px-6 lg:px-8">
+            <div className="bg-white rounded-xl shadow-lg p-8 text-center">
+              <BookOpen className="mx-auto text-gray-400 mb-4" size={48} />
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Ready to Create Flashcards?
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Enter any academic topic to generate AI-powered flashcards from quiz bowl questions
+              </p>
+              <div className="text-sm text-gray-500">
+                <p>• Questions sourced from QBReader.org</p>
+                <p>• Clues generated using fine-tuned AI</p>
+                <p>• Download as Anki-compatible .apkg files</p>
+              </div>
+            </div>
+          </div>
+        )}
     </div>
   )
 }
