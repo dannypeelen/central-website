@@ -93,12 +93,12 @@ function App() {
           <p className="mt-2 text-indigo-100">Generate smarter.</p>
         </div>
         <div className="float-right my-2">
-            <i className="text-3xl bi bi-github"></i>
+            <i className="text-3xl bi bi-github"><a href="https://github.com/dannypeelen/central-website/tree/ankimate"></a></i>
         </div>
       </header>
 
       {/* Search Bar */}
-      <div className="px-4 sm:px-6 lg:px-8 expand-item">
+      <div className="px-2 sm:px-4 lg:px-6 expand-item">
         <main className="bg-white rounded-xl shadow-lg p-6 mb-8 my-3">
           <div className="flex gap-4 mb-4">
             <div className="flex-1">
@@ -125,13 +125,33 @@ function App() {
       </div>
 
       {/* Results section */}
-      <div>
+      {flashcards.length > 0 && (
+        <div className="bg-white rounded-xl shadow-lg p-6">
+          <div className="flex justify-between items-center mb-6">
+            <div>
+                <h2 className="text-2xl font-bold text-gray-900 mb-1">{topic} Flashcards</h2>
+                <p className="text-gray-600">{flashcards.length} cards generated.</p>
+            </div>
+            <div className="flex gap-3">
+              <button
+                onClick={downloadDeck}
+                className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 flex items-center"
+              >
+                <Download size={18}></Download>
+                Download Deck
+              </button>
+            </div>
+          </div>
 
-      </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            
+          </div>
+        </div>
+      )}
 
       {/* Extra Info Block */}
       {flashcards.length === 0 && !isLoading && (
-          <div className="px-4 sm:px-6 lg:px-8 expand-item">
+          <div className="px-2 sm:px-4 lg:px-6 expand-item">
             <div className="bg-white rounded-xl shadow-lg p-8 text-center">
               <BookOpen className="mx-auto text-gray-400 mb-4" size={48} />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
