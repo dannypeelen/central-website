@@ -2,31 +2,30 @@ from flask import Flask, jsonify, request, send_file
 from flask_cors import CORS
 import requests, re, os, json
 import genanki
-from transformers import pipeline
+from transformers import pipeline, AutoTokenizer, AutoModelForSeq2SeqLM
 from random import randint
+import tempfile
 
 app = Flask(__name__)
 CORS(app)
 
 MODEL_NAME = "dpeelen9/flashcarder"
-API_URL = "qbreader.org/api/query"
+API_URL = "https://qbreader.org/api/query"
 
-try:
-    flashcarder = pipeline('text2text-generation', model=MODEL_NAME)
-except:
-    flashcarder = None
-    print("Warning: fine-tuned model not properly loaded")
 
 
 def search(topic, params={"searchType":"answer", "difficulties": [3,4,5], "minYear": 2016}, limit=10):
     """queries QBReader API, returns string of all questions"""
+    params["queryString"] = topic
     response = requests.get(API_URL, params=params)
     response.raise_for_status()
     data = response.json()
 
-    data = list(response["tossups"])
+    data = data.get("tossups", [])['questionArray']
 
+    
     questions = []
+    #print(data)
     for i in range(len(data)):
         questions.append(data[i]["question_sanitized"])
     
@@ -35,26 +34,41 @@ def search(topic, params={"searchType":"answer", "difficulties": [3,4,5], "minYe
     for i in range(len(questions)):
         combined += questions[i]
 
-    return questions
+    return combined
 
 def generate_cards(questions, max_clues=15):
-    if not flashcarder:
-        print("no model exists")
-        return []
+    
+    try:
+        tokenizer = AutoTokenizer.from_pretrained("dpeelen9/flashcarder")
+        model = AutoModelForSeq2SeqLM.from_pretrained("dpeelen9/flashcarder")
+        flashcarder = pipeline("text2text-generation", model=model, tokenizer=tokenizer)
+    except Exception as e:
+        print(f"didn't work: {e}")
+        flashcarder = pipeline("text2text-generation", model="google/flan-t5-base")
+
     
     try:
         #get list from fine-tuned model
-        result = flashcarder(questions, max_length=512, num_return_sequences=1)
+        result = flashcarder(questions, max_length=512, max_new_tokens=512, num_return_sequences=1)
         clues_text = result[0]['generated_text']
 
+        print(clues_text)
+
+        if not clues_text.endswith(']'):
+            clues_text += "\"]"
+
         try:
-            clues = list(clues_text)
-            return clues[:max_clues]
+            clues_text = json.loads(clues_text)
+            if type(clues_text) is list:
+                print("It is a list!")
+                return clues_text[:max_clues]
+            else:
+                raise ValueError("Was not a list")
         except:
             print("output was not in list-convertable format")
-            if cleaned.startswith('[') and cleaned.endswith(']'):
+            if clues_text.startswith('[') and clues_text.endswith(']'):
 
-                cleaned = cleaned[1:-1] #removes brackets
+                cleaned = clues_text[1:-1] #removes brackets
 
                 clues = []
                 current = ""
@@ -79,7 +93,7 @@ def generate_cards(questions, max_clues=15):
                 
             return clues[:max_clues]
     except Exception as e:
-        print("Error generating clues: {e}")
+        print(f"Error generating clues: {e}")
         return []
     
 def create_deck(flashcards, topic):
@@ -94,17 +108,20 @@ def create_deck(flashcards, topic):
             }]
         )
 
-    my_deck = genanki.Deck(randint(0, 10000000), "{topic} Flashcards")
+    my_deck = genanki.Deck(randint(0, 10000000), f"{topic} Flashcards")
 
+    print(flashcards)
     for card in flashcards:
-        my_deck.add_note(model=model, fields=[str(card), str(topic)])
+        print(card)
+        my_deck.add_note(genanki.Note(model=model, fields=[str(card), str(topic)]))
 
+    print("added flashcards")
     package = genanki.Package(my_deck)
 
     print("deck is built in genanki")
 
-    tempFile = tempFile.NamedTemporaryFile(delete=False, suffix=".apkg")
-    genanki.package(my_deck).write_to_file(tempFile.name)
+    tempFile = tempfile.NamedTemporaryFile(delete=False, suffix=".apkg")
+    package.write_to_file(tempFile.name)
 
     return tempFile.name
 
@@ -120,14 +137,17 @@ def generate_flashcards():
 
     try:
         questions = search(topic, limit=15)
+        
         if not questions:
             return jsonify({'error': 'no questions found on this topic'}), 404
         
         clues = generate_cards(questions)
 
+
         #make flashcard data
         flashcards = [{'front': clue, 'back': topic} for clue in clues]
         
+
         return jsonify({
             'flashcards': flashcards,
             'topic': topic,
@@ -137,10 +157,10 @@ def generate_flashcards():
         return jsonify({'error': str(e)}), 500
 
 
-@app.route('api/download-deck', methods=['POST'])
+@app.route('/api/download-deck', methods=['POST'])
 def download_deck():
     data = request.json
-    topic = data.get('topic', '').strip()
+    topic = data.get('topic', '')
     clues = data.get('clues', [])
 
     if not topic or not clues:

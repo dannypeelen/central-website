@@ -7,6 +7,7 @@ function App() {
   const [flashcards, setFlashcards] = useState([]);
   const [downloadURL, setDownloadURL] = useState("");
   const [topic, setTopic] = useState("");
+  const [error, setError] = useState("");
 
   const generateFlashcards = async () => {
     if (!topic.trim()) return;
@@ -25,6 +26,7 @@ function App() {
       });
 
       const data = await response.json();
+
 
       if (!response.ok){
         throw new Error(data.error || "Failed to generate flashcards");
@@ -53,7 +55,7 @@ function App() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ topic: clues }),
+        body: JSON.stringify({ topic, clues }),
       });
 
       if (!response.ok) {
@@ -93,18 +95,19 @@ function App() {
           <p className="mt-2 text-indigo-100">Generate smarter.</p>
         </div>
         <div className="float-right my-2">
-            <i className="text-3xl bi bi-github"><a href="https://github.com/dannypeelen/central-website/tree/ankimate"></a></i>
+            <a href="https://github.com/dannypeelen/central-website/tree/ankimate" target="_blank"><i className="text-3xl bi bi-github"></i></a>
         </div>
       </header>
 
       {/* Search Bar */}
-      <div className="px-2 sm:px-4 lg:px-6 expand-item">
-        <main className="bg-white rounded-xl shadow-lg p-6 mb-8 my-3">
+      <div className="px-2 sm:px-4 lg:px-6 expand-item w-[1800px]">
+        <main className="bg-white rounded-xl shadow-lg p-6 mb-8 my-3 ml-24">
           <div className="flex gap-4 mb-4">
             <div className="flex-1">
             <input type="text"
                   placeholder="Enter any topic (e.g., Athol Fugard, Kyrgyzstan, Torque, etc.)"
                   value={topic}
+                  onKeyPress = {(e) => e.key === 'Enter' && generateFlashcards()}
                   onChange={(e) => setTopic(e.target.value)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-lg"
             />
@@ -143,9 +146,7 @@ function App() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            
-          </div>
+          
         </div>
       )}
 
