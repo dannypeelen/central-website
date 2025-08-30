@@ -8,7 +8,7 @@ export default function App(){
   <div class="row">
 
     <div class="leftside animate__animated animate__fadeInUp">
-      <div>
+      <div class="profile">
         <img src={myImage} alt="Me!"></img>
         <h3>Danny Peelen</h3>
         <ul>
@@ -18,8 +18,7 @@ export default function App(){
           <li></li>
         </ul>
       </div>
-      <div>
-        <hr/>
+      <div class="updates">
         <h1>Updates</h1>
         <h4>04.30.2025</h4>
         <p>I have been working on various language modeling interests, trying to learn different approaches and getting comfortable using PyTorch. As for the website, I have updated my project portfolio and improved the UI!</p>
@@ -42,11 +41,42 @@ export default function App(){
       <div class="projects">
           <div class="project-row">
             <div class="project">
-                <h4>March Madness Predictor</h4>
-                <p><a href="https://github.com/dannypeelen/MLMadness"><i class="bi bi-github"></i></a> <i>March 2025</i></p>
+                <h4>AnkiMate</h4>
+                <p><a href="https://ankimate.dannypeelen.com/"><i class="bi bi-github"></i></a> <i>Releasing Soon</i></p>
                 <hr/>
-                <p>For March Madness 2025, I pulled and transformed data from SportsData.IO and built a simple PyTorch regression model to predict how many points teams would score on their opponent based regular season statistics.</p>
-                <b>Topics: Data Science, PyTorch, APIs</b>
+                <p>Using a pre-trained model from HuggingFace, I am compiling a dataset to fine-tune a model to specialize in converting text in Anki-readable flashcard content. The .apkg file produce will then be built into a front-end.</p>
+                <b>Topics: Full Stack, HuggingFace, Datasets</b>
+            </div>
+            <div class="project">
+              <h4>GPT-2 Reconstruction</h4>
+              <p><a href="#"><i class="bi bi-github"></i></a> <i>In Progress</i></p>
+              <hr/>
+              <p>Following lessons by Andrej Karpathy, I am re-building ChatGPT-2 as a simple exercise to understand the building, and optimization of deployment-ready LLMs, taking a step further from transformers.</p>
+              <b>Topics: LLMs, Linear Algebra, APIs</b>
+            </div>
+            <div class="project">
+              <h4>March Madness Predictor</h4>
+              <p><a href="https://github.com/dannypeelen/MLMadness"><i class="bi bi-github"></i></a> <i>March 2025</i></p>
+              <hr/>
+              <p>For March Madness 2025, I pulled and transformed data from SportsData.IO and built a simple PyTorch regression model to predict how many points teams would score on their opponent based regular season statistics.</p>
+              <b>Topics: Data Science, PyTorch, APIs</b>
+            </div>
+            
+          </div>
+          <div class="project-row">
+          <div class="project">
+                <h4>Magyarizer</h4>
+                <p><a href="#"><i class="bi bi-github"></i></a> <i>In Progress</i></p>
+                <hr/>
+                <p>Taking one step further, combining my knowledge of Hungarian, I am learning how to build an optimized tokenizer specialized in agglutinative languages such as Hungarian.</p>
+                <b>Topics: PyTorch, Encoding</b>
+            </div>
+            <div class="project">
+                <h4>Transformer Prototype</h4>
+                <p><a href="https://github.com/dannypeelen/transformer-cs1678"><i class="bi bi-github"></i></a> <i>April 2025</i></p>
+                <hr/>
+                <p>As part of Deep Learning class, I built a simple transformer trained on Shakespeare's <i>Richard III</i> that was based off the paper <a href="https://arxiv.org/abs/1706.03762">Attention Is All You Need</a>.</p>
+                <b>Topics: PyTorch, GPU Computing</b>
             </div>
             <div class="project">
                 <h4><a href="https://iloveisa.dannypeelen.com">Isabella Delahunty Website</a></h4>
@@ -54,36 +84,6 @@ export default function App(){
                 <hr/>
                 <p>For my girlfriend, Isa's, graduation and eventual departure to London to grad school, I built her a little website with a little photo gallery and a daily compliment for her found <a href="https://www.iloveisa.com">here.</a></p>
                 <b>Topics: React (JavaScript), CSS, AWS</b>
-            </div>
-            <div class="project">
-                <h4>Transformer Prototype</h4>
-                <p><a href="https://github.com/dannypeelen/transformer-cs1678"><i class="bi bi-github"></i></a> <i>April 2025</i></p>
-                <hr/>
-                <p>As part of Deep Learning class, I built a simple transformer trained on Shakespeare's <i>Richard III</i> that was based off the paper <a href="https://arxiv.org/abs/1706.03762">Attention Is All You Need</a>.</p>
-                <b>Topics: PyTorch, Language Modeling, GPU Computing</b>
-            </div>
-          </div>
-          <div class="project-row">
-              <div class="project">
-                    <h4>Flashcard Autogenerator</h4>
-                    <p><a href="#"><i class="bi bi-github"></i></a> <i>In Progress</i></p>
-                    <hr/>
-                    <p>Using a pre-trained model from HuggingFace, I am compiling a dataset to fine-tune a model to specialize in converting text in Anki-readable flashcard content. The .apkg file produce will then be built into a front-end.</p>
-                    <b>Topics: Full Stack, HuggingFace, Datasets</b>
-                </div>
-              <div class="project">
-                <h4>GPT-2 Reconstruction</h4>
-                <p><a href="#"><i class="bi bi-github"></i></a> <i>In Progress</i></p>
-                <hr/>
-                <p>Following lessons by Andrej Karpathy, I am re-building ChatGPT-2 as a simple exercise to understand the building, and optimization of deployment-ready LLMs, taking a step further from transformers.</p>
-                <b>Topics: LLMs, Linear Algebra, APIs</b>
-            </div>
-            <div class="project">
-                <h4>Tokenizer</h4>
-                <p><a href="#"><i class="bi bi-github"></i></a> <i>In Progress</i></p>
-                <hr/>
-                <p>Taking one step further, and in hopes of combining my knowledge of Hungarian, I am learning how to build an optimized tokenizer with the goal of eventually building one to specialized in agglutinative languages such as Hungarian.</p>
-                <b>Topics: PyTorch, Encoding</b>
             </div>
           </div>
         </div>

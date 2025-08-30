@@ -12,78 +12,82 @@ export default function Extras(){
             <li><p><b>University of Pittsburgh, School of Computing & Information</b></p>
             <p><i>B.S, Computer Science, Hungarian</i></p>
             <p><li><b>Achievements:</b> Dean's List, 3.9 GPA</li>
-            <li><b>Coursework:</b> Data Structures & Algorithms, Systems Software, Foundations of Machine Learning, Introduction to Deep Learning</li></p>
+            <li><b>Coursework:</b> Introduction to Deep Learning, Introduction to Machine Learning, Data Structure & Algorithms, Systems Software</li></p>
             </li>
           </ul>
           <hr/>
           <h2>Work Experience</h2>
           <ul>
-          <li><p><b>PNC Financial Services Group, Inc.</b></p>
-            <p><i>Software Engineering Intern</i></p>
-            <p><li>Selected out of thousands of applicants for a competitive internship position to work in a professional environment.</li>
-            <li>Utilized precise Google and Excel Spreadsheets integrated with independent Python scripts to streamline data processing.
-             </li></p>
+          <li><p><b>Machine Learning Engineer Intern</b></p>
+            <p><i>Thursday</i></p>
+            <p><li>Built an Dockerized end-to-end recommendation pipeline (ingest data →build features →train model →serve)</li>
+            <li>Implemented CI/CD (GitHub Actions + Docker) and canary staging; added real-time monitoring to cut rollback time.</li>
+            <li>Integrated model endpoints into React frontend with &lt; 200ms latency per prediction, scaled system for ~10k MAUs.</li>
+            </p>
             </li>
-          <li><p><b>University of Pittsburgh, School of Computing & Information</b></p>
-            <p><i>Teaching Assistant for Discrete Mathematics</i></p>
-            <p><li>Led recitations and office hours to assist students with Discrete Mathematics topics, including formal proofs and set theory.</li>
-            <li>Engaged in problem-solving techniques that support clear algorithmic thinking essential for software and system analysis.</li></p>
+          <li><p><b>Software Engineering Intern</b></p>
+            <p><i>PNC Financial Services Inc.</i></p>
+            <p><li>Built a Spring Boot + Angular micro-app from scratch to analyze housing data, set to be integrated into production.</li>
+            <li>Standardized error handling and refactored back-end logic, shipping changes biweekly in an Agile team.</li>
+            <li>Wrote Angular unit tests, raising coverage by 40% across the application to meet SonarQube requirements.</li>
+             </p>
             </li>
-            <li><p><b>University of Pittsburgh Women's Volleyball Team</b></p>
-            <p><i>Data Analyst & Team Manager</i></p>
-            <p><li>Utilized VolleyMetrics software to code play-to-play accounts of games and analyze other teams' code to create scoutbooks for the coaching staff.</li>
-            <li>Built scouting reports and ensured practices and games were as efficient as possible.</li></p>
+          <li><p><b>Teaching Assistant for Discrete Mathematics</b></p>
+            <p><i>University of Pittsburgh, School of Computing & Information</i></p>
+            <p><li>Led recitations (~30 students), office hours, and built problem sets, improving exam scores from the previous year by 6%.</li>
+            <li>Ran focused sessions, iterating through key material while factoring in student feedback to build algorithmic thinking skills.</li></p>
+            </li>
+            <li><p><b>Data Analyst</b></p>
+            <p><i>University of Pittsburgh Women's Volleyball Team</i></p>
+            <p><li>Coded 40+ matches and produced 25+ scouting reports alongside coaches, used for enhanced practice quality and match prep.</li>
+            <li>Implemented strategies to optimize practices in real-time, using constant communication to ensure maximum efficiency.</li></p>
             </li>
           </ul>
           <hr/>
           <h2>Projects</h2>
           <ul>
+          <li><p><b>AnkiMate</b></p>
+              <p><i>Tech: Python, HuggingFace (Flan-T5), PyTorch, Flask, React </i></p>
+              <p><li>Automated PDF/PPT →flashcard pipelined; fine-tuned model on self-built 10k-row dataset, reduced validation loss by 58%.
+              </li>
+              <li>Designed and deployed a Flask backend for flashcard and file generation; used React with Tailwind CSS for a responsive UI.</li>
+              <li>Implemented A/B testing and deployed via GitHub, reaching high satisfaction among ~50 users.</li></p>
+              </li>
           <li><p><b>GPT-2 Prototype</b></p>
-            <p><i>University of Pittsburgh</i></p>
-            <p><li>Implemented a minimal GPT-2 architecture from scratch in PyTorch, including core components like multi-head causal self-attention, GELU-activated feedforward layers, positional embeddings, and residual connections.
+            <p><i>Tech: PyTorch, NumPy, HuggingFace</i></p>
+            <p><li>Implemented minimal GPT-2 (attention, GeLU, LayerNorm) with HuggingFace weights; matched behavior and loss within 10%.
             </li>
-            <li>Developed a custom model loader to integrate and align pretrained HuggingFace GPT-2 weights, resolving parameter mismatches and shape incompatibilities.</li></p>
-            </li>
-            <li><p><b>Flashcard Autogenerator</b></p>
-              <p><i>University of Pittsburgh</i></p>
-              <p><li>Streamlined study preparation, reducing flashcard creation time by automating extraction from PDF or PPTX files and formatting content for Anki decks.
-              </li>
-              <li>Utilized several Python libraries and Google's Gemini API for natural language processing to extract and process text.</li>
-              <li>Plans to incorporate Flask and SQLite to build into a functional website.</li></p>
-              </li>
-            <li><p><b>March Madness Bracket Predictor</b></p>
-            <p><i>University of Pittsburgh</i></p>
-            <p><li>Used Python's Pandas and scikit-learn modules to organize and test data into a one-versus-rest (OvR) classification model to predict 2024's March Madness results.</li>
-            <li>Applied several data science concepts to edit and analyze data, then using machine learning techniques to make educated predictions.</li></p>
-            </li>
+            <li>Developed a custom model loader for HuggingFace GPT-2 weights, fixing parameter mismatches and shape incompatibilities.</li></p>
+            </li>            
           </ul>
           <hr/>
           <h2>Skills</h2>
           <ul>
-            <li><b>Programming Languages:</b> Java, Python, C/C++, HTML5, CSS, PHP, JavaScript, SQL</li>
-            <li><b>Libraries/Frameworks:</b> React, TensorFlow, SQLite3, BeautifulSoup, Pandas, sklearn, pygame, Bootstrap</li>
-            <li><b>Techincal Skills:</b> Debugging, Linux, Machine Learning, Databases, Web Application Development, AWS</li>
-            <li><b>Languages: English(native), Hungarian(conversational)</b></li>
+            <li><b>Programming Languages:</b> Python, Java, JavaScript, C/C++, SQL, HTML5, CSS</li>
+            <li><b>Libraries/Frameworks:</b> PyTorch, Docker, React, HuggingFace, NumPy, Pandas, Kafka, Angular, Hadoop, NodeJS, Spring Boot</li>
+            <li><b>Techincal Skills:</b>  Unit Testing, CI/CD, Deep Learning, Machine Learning, Natural Language Processing, APIs, A/B Testing</li>
+            <li><b>Languages: English (native), Hungarian (conversational)</b></li>
           </ul>
           <hr/>
           <h2>Extracurriculars & Awards</h2>
           <ul>
           <li><p><b>Officer, Computer Science Club @ Pitt</b></p>
-            <p><li>Help organize speakers from Microsoft and Amazon for the largest organization on campus.</li>
-            <li>Organized University of Pittsburgh’s SteelHacks hackathon, with 250+ attendants and sponsors such as Google, PNC, and Eaton.</li></p>
+            <p><li>Help organize speakers from Microsoft, Google, and Amazon for the largest organization on Pitt campus.</li>
+            <li>Increased unique attendance by 40% and helped in growing the Instagram account to almost 15,000 followers.</li></p>
+            </li>
+            <li><p><b>Director, SteelHacks</b></p>
+            <p><li>Secured connections with organizations at UC Berkeley, CMU, and Columbia through email campaigns.</li></p>
+            <p><li>Helped bring in over 300+ attendees from 20+ schools and sponsors, including Google, Amazon, and PNC. </li></p>
             </li>
             <li><p><b>Officer, Quiz Bowl</b></p>
-            <p><li>Competed against various colleges in quiz bowl tournaments and organized several tournaments for local high school teams.</li></p>
-            </li>
-            <li><p><b>Hungarian Room Scholarship</b></p>
-            <p><li>Awarded $6,000 to fund traveling abroad in Debrecen, Hungary to study the History of Modern Hungary.</li></p>
+            <p><li>Placed 3rd in the national tournament against top schools and organized several tournaments for local high school teams. </li></p>
             </li>
           </ul>
           <hr/>
           <h2>Citizenship</h2>
             <p><b>USA, Hungary</b></p>
           <hr/>
-          <p>Check out the full PDF here: <a href="./Daniel Peelen Resume M.pdf">Daniel Peelen Resume</a></p>
+          <p>Check out the full PDF here: <a target="_blank" href="https://docs.google.com/document/d/1v9NcRh-k2foDgw5KVHvbvvpd7F3mJL6-22QwbfgHiNM/edit?usp=sharing">Daniel Peelen Resume</a></p>
         </div>
       </div>
     </div>

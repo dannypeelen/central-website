@@ -3,6 +3,7 @@ import { StrictMode } from 'react';
 import Portfolio from '/src/Home.jsx';
 import Home from '/src/About.jsx';
 import Resume from '/src/Extras.jsx';
+import myImage from './Portrait.jpeg';
 
 export default function App() {
   // State to keep track of the current page
@@ -31,6 +32,9 @@ export default function App() {
     <div>
       <nav class="navbar">
         <ul>
+          <li><a href="" onClick={(e) => handleNavClick("home",e)}>
+              <img src={myImage}></img>
+            </a></li>
           <li><a href="" onClick={(e) => handleNavClick("home", e)}>
             About Me
           </a></li>
