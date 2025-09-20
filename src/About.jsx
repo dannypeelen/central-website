@@ -37,6 +37,14 @@ export default function About(){
     {/* <div style="border-left: 2px solid black;"></div> */}
     <div class="rightside animate__animated animate__fadeInUp">
       <div class="about">
+        <p>
+        <b>LLM WORKSHOP Material:</b>
+        <br></br>
+        <a href="https://colab.research.google.com/drive/1MnW8Ph93ZlRK7EX59jxJO4drlL6L9Agg?usp=sharing">RAG Notebook</a>
+        <br></br>
+        <a href="https://colab.research.google.com/drive/1RJoEM2YMmrJsvXA1eRBxjrPdVDswYLqf?usp=sharing">FineTune Notebook</a></p>
+      </div>
+      <div class="about">
         <h1>About Me</h1>
         <p>Hi, I’m Danny! As a third-year Computer Science student at the University of Pittsburgh, I have found I am passionate about building scalable AI/ML systems to solve real-world problems. I’ve developed an end-to-end recommendation pipeline as a Machine Learning Engineer Intern at Thursday, built production-ready micro-apps at PNC, and supported students as a Discrete Mathematics TA. I also enjoy exploring personal projects around fine-tuning language models and building transformers.</p>
       </div>
