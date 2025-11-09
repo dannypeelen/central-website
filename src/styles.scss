@@ -189,12 +189,15 @@ body{
 }
 
 .features{
-    height:205vh;
+    min-height: 100vh;
+    height: auto;
     width:95%;
     background: white;
     margin-left:30px;
     margin-top:10px;
+    margin-bottom:30px;
     border-radius:4%;
+    padding-bottom: 20px;
 }
 
 .features input, button, p, h1, h5{
@@ -228,6 +231,11 @@ body{
     margin:10px;
     transition: transform 0.3s ease;
     padding-bottom:10px;
+    height:auto;
+}
+
+.project p{
+    padding:5px;
 }
 
 .project:hover{
@@ -269,4 +277,87 @@ body{
 
 .entries b{
     font-size:large;
+}
+
+.section{
+    margin:5px;
+    background-color:rgb(226, 225, 225);
+    border-radius:10px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 15px;
+    min-height: auto;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.icon{
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    width: 100px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon img{
+    width: 100%;
+    height: auto;
+    max-height: 100px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+.content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: auto;
+}
+
+.content p{
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.content p:first-child{
+    margin-top: 0;
+}
+
+.content p:last-child{
+    margin-bottom: 0;
+}
+
+.timespan{
+    flex-shrink: 0;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-left: 15px;
+    border-left: 2px solid #ddd;
+    margin-left: 0;
+}
+
+.timespan p{
+    margin: 2px 0;
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.4;
+}
+
+.timespan .date{
+    font-weight: 600;
+    color: #333;
+}
+
+.timespan .location{
+    font-style: italic;
+    color: #666;
+    font-size: 0.85em;
 }

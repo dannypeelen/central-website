@@ -20,6 +20,10 @@ export default function App(){
       </div>
       <div class="updates">
         <h1>Updates</h1>
+        <h4>11.09.2025</h4>
+        <p>I have a few awesome project updates from attending HackHarvard in Boston and CalHacks in SF! I also re-vamped the resume page, since the UI seemed a little shaky.</p>
+        <h4>08.25.2025</h4>
+        <p>Last month I completed my internship at PNC! I am still continuing steadily with Thursday, a CMU startup. I have a had really fun time being head architect of this recommendation system they have. But now, back to school! Also updated a bunch of the UI to be more minimamlist.</p>
         <h4>04.30.2025</h4>
         <p>I have been working on various language modeling interests, trying to learn different approaches and getting comfortable using PyTorch. As for the website, I have updated my project portfolio and improved the UI!</p>
         <h4>03.05.2025</h4>
@@ -39,7 +43,7 @@ export default function App(){
       <h1>Welcome to my Portfolio!</h1>
       <hr/>
       <div class="projects">
-          <div class="project-row">
+      <div class="project-row">
             <div class="project">
                 <h4>AnkiMate</h4>
                 <p><a href="https://ankimate.dannypeelen.com/"><i class="bi bi-github"></i></a> <i>Releasing Soon</i></p>
@@ -48,8 +52,32 @@ export default function App(){
                 <b>Topics: Full Stack, HuggingFace, Datasets</b>
             </div>
             <div class="project">
+              <h4>GhostPIN</h4>
+              <p><a href="https://github.com/dannypeelen/ghostpin/tree/ved"><i class="bi bi-github"></i></a> <i>October 2025</i></p>
+              <hr/>
+              <p>Built at HackHarvard, GhostPIN is a drop-in SDK that acts as an "invisible handshake" between merchants and customers. Not only does it verify the user but also that the merchant is legit.</p>
+              <b>Topics: JavaScript, SDK, MFA</b>
+            </div>
+            <div class="project">
+              <h4>Mantis</h4>
+              <p><a href="https://github.com/oviozz/mantis"><i class="bi bi-github"></i></a> <i>October 2025</i></p>
+              <hr/>
+              <p>Built at CalHacks, Mantis is a live-time surveillance tool geared towards small businesses. Mantis helps ensure activities such as shoplifiting or weapon-carrying are detected and store employees are alerted.</p>
+              <b>Topics: Computer Vision, Cloud</b>
+            </div>
+       
+          </div>
+          <div class="project-row">
+          <div class="project">
+                <h4>Magyarizer</h4>
+                <p><a href="#"><i class="bi bi-github"></i></a> <i>In Progress</i></p>
+                <hr/>
+                <p>Taking one step further, combining my knowledge of Hungarian, I am learning how to build an optimized tokenizer specialized in agglutinative languages such as Hungarian. While the tokenizer itself is fun to build, it has been interesting to realize its limitations and alternates such as OCR.</p>
+                <b>Topics: PyTorch, Encoding</b>
+            </div>
+            <div class="project">
               <h4>GPT-2 Reconstruction</h4>
-              <p><a href="#"><i class="bi bi-github"></i></a> <i>In Progress</i></p>
+              <p><a href="#"><i class="bi bi-github"></i></a> <i>April 2025</i></p>
               <hr/>
               <p>Following lessons by Andrej Karpathy, I am re-building ChatGPT-2 as a simple exercise to understand the building, and optimization of deployment-ready LLMs, taking a step further from transformers.</p>
               <b>Topics: LLMs, Linear Algebra, APIs</b>
@@ -61,16 +89,9 @@ export default function App(){
               <p>For March Madness 2025, I pulled and transformed data from SportsData.IO and built a simple PyTorch regression model to predict how many points teams would score on their opponent based regular season statistics.</p>
               <b>Topics: Data Science, PyTorch, APIs</b>
             </div>
-            
+       
           </div>
           <div class="project-row">
-          <div class="project">
-                <h4>Magyarizer</h4>
-                <p><a href="#"><i class="bi bi-github"></i></a> <i>In Progress</i></p>
-                <hr/>
-                <p>Taking one step further, combining my knowledge of Hungarian, I am learning how to build an optimized tokenizer specialized in agglutinative languages such as Hungarian.</p>
-                <b>Topics: PyTorch, Encoding</b>
-            </div>
             <div class="project">
                 <h4>Transformer Prototype</h4>
                 <p><a href="https://github.com/dannypeelen/transformer-cs1678"><i class="bi bi-github"></i></a> <i>April 2025</i></p>

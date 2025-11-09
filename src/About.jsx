@@ -18,8 +18,10 @@ export default function About(){
       </div>
       <div class="updates">
         <h1>Updates</h1>
+        <h4>11.09.2025</h4>
+        <p>I have a few awesome project updates from attending HackHarvard in Boston and CalHacks in SF! I also re-vamped the resume page, since the UI seemed a little shaky.</p>
         <h4>08.25.2025</h4>
-        <p>Last month I completed my interenship at PNC! I am still continuing steadily with Thursday, a CMU startup. I have a had really fun time being head architect of this recommendation system they have. But now, back to school! Also updated a bunch of the UI to be more minimamlist.</p>
+        <p>Last month I completed my internship at PNC! I am still continuing steadily with Thursday, a CMU startup. I have a had really fun time being head architect of this recommendation system they have. But now, back to school! Also updated a bunch of the UI to be more minimamlist.</p>
         <h4>04.30.2025</h4>
         <p>I have been working on various language modeling interests, trying to learn different approaches and getting comfortable using PyTorch. As for the website, I have updated my project portfolio and improved the UI!</p>
         <h4>03.05.2025</h4>
@@ -36,14 +38,6 @@ export default function About(){
     </div>
     {/* <div style="border-left: 2px solid black;"></div> */}
     <div class="rightside animate__animated animate__fadeInUp">
-      <div class="about">
-        <p>
-        <b>LLM WORKSHOP Material:</b>
-        <br></br>
-        <a href="https://colab.research.google.com/drive/1MnW8Ph93ZlRK7EX59jxJO4drlL6L9Agg?usp=sharing">RAG Notebook</a>
-        <br></br>
-        <a href="https://colab.research.google.com/drive/1RJoEM2YMmrJsvXA1eRBxjrPdVDswYLqf?usp=sharing">FineTune Notebook</a></p>
-      </div>
       <div class="about">
         <h1>About Me</h1>
         <p>Hi, I’m Danny! As a third-year Computer Science student at the University of Pittsburgh, I have found I am passionate about building scalable AI/ML systems to solve real-world problems. I’ve developed an end-to-end recommendation pipeline as a Machine Learning Engineer Intern at Thursday, built production-ready micro-apps at PNC, and supported students as a Discrete Mathematics TA. I also enjoy exploring personal projects around fine-tuning language models and building transformers.</p>
