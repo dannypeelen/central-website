@@ -6,6 +6,8 @@
     font-size:24px;
     padding:0px;
     margin-left:50px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .navbar a{
@@ -52,6 +54,8 @@ body{
 .row{
     margin-top:10px;
     width:100%;
+    display: flex;
+    flex-direction: row;
 }
 
 .leftside, .rightside{
@@ -332,6 +336,43 @@ body{
     margin-bottom: 0;
 }
 
+.project-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.project-header p{
+    margin: 0;
+    flex: 1;
+}
+
+.project-links{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.project-links a{
+    color: #333;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.project-links a:hover{
+    color: #007bff;
+}
+
+.project-date{
+    font-style: italic;
+    color: #666;
+    font-size: 0.9em;
+}
+
 .timespan{
     flex-shrink: 0;
     width: 180px;
@@ -360,4 +401,180 @@ body{
     font-style: italic;
     color: #666;
     font-size: 0.85em;
+}
+
+// Responsive design for tablets and phones
+@media (max-width: 1024px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .leftside, .rightside {
+        width: 100% !important;
+        float: none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        height: auto !important;
+    }
+
+    .leftside {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .rightside {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .bar {
+        display: none;
+    }
+
+    .navbar {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+    }
+
+    .navbar li {
+        float: none;
+        display: inline-block;
+    }
+
+    .features {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 20px;
+    }
+
+    .entries {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .section {
+        flex-direction: column !important;
+        gap: 10px;
+    }
+
+    .timespan {
+        width: 100% !important;
+        border-left: none !important;
+        border-top: 2px solid #ddd;
+        padding-left: 0 !important;
+        padding-top: 10px;
+        margin-top: 10px;
+        align-items: flex-start !important;
+    }
+
+    .icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .project-row {
+        width: 100% !important;
+        float: none !important;
+    }
+
+    .project {
+        width: 100% !important;
+        float: none !important;
+        margin: 10px 0 !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        font-size: 18px;
+    }
+
+    .navbar a {
+        padding: 10px;
+    }
+
+    .navbar img {
+        height: 30px;
+    }
+
+    .leftside img {
+        width: 40%;
+    }
+
+    .leftside, .rightside {
+        padding: 15px;
+    }
+
+    .features {
+        padding: 15px;
+    }
+
+    .entries {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .section {
+        padding: 10px;
+    }
+
+    .icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .content p {
+        font-size: 0.9em;
+    }
+
+    .rightside h1, .rightside h3, .rightside h4 {
+        font-size: 1.2em;
+        margin-left: 10px;
+    }
+
+    .rightside p {
+        margin-left: 10px;
+    }
+
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .project-links {
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        font-size: 16px;
+    }
+
+    .navbar a {
+        padding: 8px;
+    }
+
+    .leftside img {
+        width: 50%;
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .content p {
+        font-size: 0.85em;
+    }
+
+    .timespan p {
+        font-size: 0.8em;
+    }
 }

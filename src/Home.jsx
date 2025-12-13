@@ -1,4 +1,6 @@
 import myImage from './Portrait.jpeg';
+import Anki from './anki.jpeg';
+import GPT from './gpt.jpeg';
 
 export default function App(){
   const BASE_URL = import.meta.env.BASE_URL;
@@ -40,78 +42,152 @@ export default function App(){
     </div>
 
     <div class="rightside animate__animated animate__fadeInUp">
-      <h1>Welcome to my Portfolio!</h1>
-      <hr/>
-      <div class="projects">
-      <div class="project-row">
-            <div class="project">
-                <h4>AnkiMate</h4>
-                <p><a href="https://ankimate.dannypeelen.com/"><i class="bi bi-github"></i></a> <i>Releasing Soon</i></p>
-                <hr/>
-                <p>Using a pre-trained model from HuggingFace, I am compiling a dataset to fine-tune a model to specialize in converting text in Anki-readable flashcard content. The .apkg file produce will then be built into a front-end.</p>
-                <b>Topics: Full Stack, HuggingFace, Datasets</b>
+      <div class="features">
+        <div class="entries">
+          <h1>Projects</h1>
+          
+          <div class="section">
+            <div class="icon">
+              <img src={Anki} alt="AnkiMate Icon" class="icon"></img>
             </div>
-            <div class="project">
-              <h4>GhostPIN</h4>
-              <p><a href="https://github.com/dannypeelen/ghostpin/tree/ved"><i class="bi bi-github"></i></a> <i>October 2025</i></p>
-              <hr/>
-              <p>Built at HackHarvard, GhostPIN is a drop-in SDK that acts as an "invisible handshake" between merchants and customers. Not only does it verify the user but also that the merchant is legit.</p>
-              <b>Topics: JavaScript, SDK, MFA</b>
+            <div class="content">
+              <div class="project-header">
+                <p><b>AnkiMate</b></p>
+                <div class="project-links">
+                  <a href="https://ankimate.dannypeelen.com/" target="_blank"><i class="bi bi-github"></i></a>
+                  <i class="project-date">Releasing Soon</i>
+                </div>
+              </div>
+              <p><i>Tech: Python, HuggingFace (Flan-T5), PyTorch, Flask, React</i></p>
+              <p>Using a pre-trained model from HuggingFace, I am compiling a dataset to fine-tune a model to specialize in converting text in Anki-readable flashcard content. The .apkg file produce will then be built into a front-end.</p>
+              <p>Automated PDF/PPT →flashcard pipelined; fine-tuned model on self-built 10k-row dataset, reduced validation loss by 58%.</p>
+              <p>Designed and deployed a Flask backend for flashcard and file generation; used React with Tailwind CSS for a responsive UI.</p>
             </div>
-            <div class="project">
-              <h4>Mantis</h4>
-              <p><a href="https://github.com/oviozz/mantis"><i class="bi bi-github"></i></a> <i>October 2025</i></p>
-              <hr/>
-              <p>Built at CalHacks, Mantis is a live-time surveillance tool geared towards small businesses. Mantis helps ensure activities such as shoplifiting or weapon-carrying are detected and store employees are alerted.</p>
-              <b>Topics: Computer Vision, Cloud</b>
-            </div>
-       
           </div>
-          <div class="project-row">
-          <div class="project">
-                <h4>Magyarizer</h4>
-                <p><a href="#"><i class="bi bi-github"></i></a> <i>In Progress</i></p>
-                <hr/>
-                <p>Taking one step further, combining my knowledge of Hungarian, I am learning how to build an optimized tokenizer specialized in agglutinative languages such as Hungarian. While the tokenizer itself is fun to build, it has been interesting to realize its limitations and alternates such as OCR.</p>
-                <b>Topics: PyTorch, Encoding</b>
+
+          <div class="section">
+            <div class="icon">
+              <img src={GPT} alt="GPT Icon" class="icon"></img>
             </div>
-            <div class="project">
-              <h4>GPT-2 Reconstruction</h4>
-              <p><a href="#"><i class="bi bi-github"></i></a> <i>April 2025</i></p>
-              <hr/>
+            <div class="content">
+              <div class="project-header">
+                <p><b>LLM Prototype</b></p>
+                <div class="project-links">
+                  <a href="#" target="_blank"><i class="bi bi-github"></i></a>
+                  <i class="project-date">Nov-Dec 2025</i>
+                </div>
+              </div>
+              <p><i>Tech: PyTorch, NumPy, HuggingFace</i></p>
               <p>Following lessons by Andrej Karpathy, I am re-building ChatGPT-2 as a simple exercise to understand the building, and optimization of deployment-ready LLMs, taking a step further from transformers.</p>
-              <b>Topics: LLMs, Linear Algebra, APIs</b>
+              <p>Implemented minimal GPT-2 (attention, GeLU, LayerNorm) with HuggingFace weights; matched behavior and loss within 10%.</p>
+              <p>Developed a custom model loader for HuggingFace GPT-2 weights, fixing parameter mismatches and shape incompatibilities.</p>
             </div>
-            <div class="project">
-              <h4>March Madness Predictor</h4>
-              <p><a href="https://github.com/dannypeelen/MLMadness"><i class="bi bi-github"></i></a> <i>March 2025</i></p>
-              <hr/>
+          </div>
+
+          <div class="section">
+            <div class="icon">
+              <img src={GPT} alt="Transformer Icon" class="icon"></img>
+            </div>
+            <div class="content">
+              <div class="project-header">
+                <p><b>Transformer Prototype</b></p>
+                <div class="project-links">
+                  <a href="https://github.com/dannypeelen/transformer-cs1678" target="_blank"><i class="bi bi-github"></i></a>
+                  <i class="project-date">April 2025</i>
+                </div>
+              </div>
+              <p><i>Tech: PyTorch, GPU Computing</i></p>
+              <p>As part of Deep Learning class, I built a simple transformer trained on Shakespeare's <i>Richard III</i> that was based off the paper <a href="https://arxiv.org/abs/1706.03762">Attention Is All You Need</a>.</p>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="icon">
+              <img src={GPT} alt="Magyarizer Icon" class="icon"></img>
+            </div>
+            <div class="content">
+              <div class="project-header">
+                <p><b>Magyarizer</b></p>
+                <div class="project-links">
+                  <a href="#" target="_blank"><i class="bi bi-github"></i></a>
+                  <i class="project-date">In Progress</i>
+                </div>
+              </div>
+              <p><i>Tech: PyTorch, Encoding</i></p>
+              <p>Taking one step further, combining my knowledge of Hungarian, I am learning how to build an optimized tokenizer specialized in agglutinative languages such as Hungarian. While the tokenizer itself is fun to build, it has been interesting to realize its limitations and alternates such as OCR.</p>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="icon">
+              <img src={GPT} alt="GhostPIN Icon" class="icon"></img>
+            </div>
+            <div class="content">
+              <div class="project-header">
+                <p><b>GhostPIN</b></p>
+                <div class="project-links">
+                  <a href="https://github.com/dannypeelen/ghostpin/tree/ved" target="_blank"><i class="bi bi-github"></i></a>
+                  <i class="project-date">October 2025</i>
+                </div>
+              </div>
+              <p><i>Tech: JavaScript, SDK, MFA</i></p>
+              <p>Built at HackHarvard, GhostPIN is a drop-in SDK that acts as an "invisible handshake" between merchants and customers. Not only does it verify the user but also that the merchant is legit.</p>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="icon">
+              <img src={GPT} alt="Mantis Icon" class="icon"></img>
+            </div>
+            <div class="content">
+              <div class="project-header">
+                <p><b>Mantis</b></p>
+                <div class="project-links">
+                  <a href="https://github.com/oviozz/mantis" target="_blank"><i class="bi bi-github"></i></a>
+                  <i class="project-date">October 2025</i>
+                </div>
+              </div>
+              <p><i>Tech: Computer Vision, Cloud</i></p>
+              <p>Built at CalHacks, Mantis is a live-time surveillance tool geared towards small businesses. Mantis helps ensure activities such as shoplifiting or weapon-carrying are detected and store employees are alerted.</p>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="icon">
+              <img src={GPT} alt="March Madness Icon" class="icon"></img>
+            </div>
+            <div class="content">
+              <div class="project-header">
+                <p><b>March Madness Predictor</b></p>
+                <div class="project-links">
+                  <a href="https://github.com/dannypeelen/MLMadness" target="_blank"><i class="bi bi-github"></i></a>
+                  <i class="project-date">March 2025</i>
+                </div>
+              </div>
+              <p><i>Tech: Data Science, PyTorch, APIs</i></p>
               <p>For March Madness 2025, I pulled and transformed data from SportsData.IO and built a simple PyTorch regression model to predict how many points teams would score on their opponent based regular season statistics.</p>
-              <b>Topics: Data Science, PyTorch, APIs</b>
             </div>
-       
           </div>
-          <div class="project-row">
-            <div class="project">
-                <h4>Transformer Prototype</h4>
-                <p><a href="https://github.com/dannypeelen/transformer-cs1678"><i class="bi bi-github"></i></a> <i>April 2025</i></p>
-                <hr/>
-                <p>As part of Deep Learning class, I built a simple transformer trained on Shakespeare's <i>Richard III</i> that was based off the paper <a href="https://arxiv.org/abs/1706.03762">Attention Is All You Need</a>.</p>
-                <b>Topics: PyTorch, GPU Computing</b>
+
+          <div class="section">
+            <div class="icon">
+              <img src={GPT} alt="Isabella Website Icon" class="icon"></img>
             </div>
-            <div class="project">
-                <h4><a href="https://iloveisa.dannypeelen.com">Isabella Delahunty Website</a></h4>
-                <p><a href="https://iloveisa.dannypeelen.com"><i class="bi bi-github"></i></a> <i>April 2025</i></p>
-                <hr/>
-                <p>For my girlfriend, Isa's, graduation and eventual departure to London to grad school, I built her a little website with a little photo gallery and a daily compliment for her found <a href="https://www.iloveisa.com">here.</a></p>
-                <b>Topics: React (JavaScript), CSS, AWS</b>
+            <div class="content">
+              <div class="project-header">
+                <p><b><a href="https://iloveisa.dannypeelen.com">Isabella Delahunty Website</a></b></p>
+                <div class="project-links">
+                  <a href="https://iloveisa.dannypeelen.com" target="_blank"><i class="bi bi-github"></i></a>
+                  <i class="project-date">April 2025</i>
+                </div>
+              </div>
+              <p><i>Tech: React (JavaScript), CSS, AWS</i></p>
+              <p>For my girlfriend, Isa's, graduation and eventual departure to London to grad school, I built her a little website with a little photo gallery and a daily compliment for her found <a href="https://www.iloveisa.com">here.</a></p>
             </div>
           </div>
         </div>
-        </div>
-
-
+      </div>
     </div>
-
+    </div>
 );
 }
