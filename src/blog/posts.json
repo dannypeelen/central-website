@@ -1,0 +1,11 @@
+{
+  "posts": [
+    {
+      "id": "welcome-to-blog",
+      "title": "Welcome to My Blog",
+      "date": "2025-01-22",
+      "excerpt": "Starting a blog to share updates on projects, learning experiences, and other interesting things I'm working on.",
+      "content": "<p>Welcome to my blog! I'm starting this as a way to document my journey in computer science, machine learning, and software engineering.</p><p>Here I'll share updates on projects I'm working on, things I'm learning, and other interesting developments in my work and studies.</p><p>Stay tuned for more posts!</p>"
+    }
+  ]
+}
