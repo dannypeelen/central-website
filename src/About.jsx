@@ -40,20 +40,20 @@ export default function About(){
     <div class="rightside animate__animated animate__fadeInUp">
       <div class="about">
         <h1>About Me</h1>
-        <p>Hi, I’m Danny! As a third-year Computer Science student at the University of Pittsburgh, I have found I am passionate about building scalable AI/ML systems to solve real-world problems. I’ve developed an end-to-end recommendation pipeline as a Machine Learning Engineer Intern at Thursday, built production-ready micro-apps at PNC, and supported students as a Discrete Mathematics TA. I also enjoy exploring personal projects around fine-tuning language models and building transformers.</p>
+        <p>Hi, I’m Danny! As a third-year Computer Science student at the University of Pittsburgh, I have found I am passionate about building scalable AI/ML systems to solve real-world problems, as I am doing with Synopsys right now. In my free time, I enjoy playing around with Deep Learning, such as building LLMs from scratch and building private datasets.</p>
       </div>
       <div class="interests">
       <h1>My Interests</h1>
         <h3>Computer Science</h3>
-        <p>As a Software Engineer, it is no surprise Computer Science is one of my biggest interests. I am specifically interested in Machine Learning and Artifical Intelligence, and LLMs. I am also potentially looking at Natural Language Processing in the near future. I am also an officer of our Computer Science Club, check us out <a href="https://pittcsc.org/">here</a>!</p>
+        <p>As a Software Engineer, it is no surprise Computer Science is one of my biggest interests. I am specifically interested in Machine Learning and Artifical Intelligence, and LLMs. I have had the pleasure while at Pitt, of working with <a href="https://www.pitcsc.org/">Pitt CSC</a> and as a Director for SteelHacks! Check out my resume and portfolio for more.</p>
         <h3>Quiz Bowl</h3>
-        <p>I have been playing Quiz Bowl since middle school (9 years now woah!). I have always found learning in various topics, especially literature and fine arts, incredibly exciting. In competition I managed to place 4th individually in the National Tournament. I am currently the University of Pittsburgh's Quizbowl President and have led our team to four Top 4 finishes in my time here. Most recently we placed 12th nationally at Undergraduate Nationals and are expected to compete nationally in Chicago on April 5!</p>
+        <p>I have been playing Quiz Bowl since middle school (9 years now woah!). I have always found learning in various topics, especially literature and fine arts, incredibly exciting. In competition, I managed to place 4th individually in scoring high school nationals, and at Pitt have led our team to several tournament wins as well as 3rd nationally. </p>
         <h3>Volleyball</h3>
-        <p>I switched from soccer to playing volleyball my freshman year of high school, and I never looked back. I love the fast pace of volleyball and the physicality it requires, especially playing grass and beach doubles outdoors. Over the summer, and often during breaks, you can find me playing tournaments with friends hitting as either an opposite or more recently setting! Here at the University of Pittsburgh I am also on the club team, being part of 7 out of 55 people to make the team during my tryouts. Up until now, I also helped our nationally-ranked #1 Women's Volleyball team in practice as well as assisting in their scouting reports, analyzing data.</p>
+        <p>I switched from soccer to playing volleyball my freshman year of high school, and I never looked back. Here at Pitt I play on our men's club team and have helped our nationally-ranked #1 Women's Volleyball team in practice as well as assisting in their analyzing data for scouting reports.</p>
       </div>
       <div class="hu">
         <h1>Hungary</h1>
-        <p>My mother was born and raised in Budapest, Hungary before moving to the US for her PhD. Because of this, I spent 2012-2013 living in Budapest and went to school there for 2nd grade. As part of that I became fluent in Hungarian (and unfortunately lost it all in the years following). My Hungarian roots and something I dearly treasure and is why I am minoring in Hungarian hear at Pitt. I am currently proficient in Hungarian being able to live there on my own no problem. I also had the pleasure last summer to study abroad in Debrecen, where I learned about the History of Modern Hungary with Dr. Róbert Barta and Dr. István Rácz!</p>
+        <p>My mother was born and raised in Budapest, Hungary before moving to the US for her PhD. My Hungarian roots and something I dearly treasure and is why I am minoring in Hungarian here at Pitt. I am currently advanced in Hungarian (around C2) and enjoy speaking any time I can. I also had the pleasure last summer to study abroad in Debrecen, where I learned about the History of Modern Hungary with Dr. Róbert Barta and Dr. István Rácz!</p>
       </div>
     </div>
 
