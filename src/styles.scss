@@ -373,6 +373,45 @@ body{
     font-size: 0.9em;
 }
 
+.project-category{
+    margin-bottom: 20px;
+}
+
+.category-header{
+    width: 100%;
+    background-color: rgb(226, 225, 225);
+    border: none;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    
+    &:hover{
+        background-color: rgb(210, 209, 209);
+        transform: scale(1.01);
+    }
+    
+    h2{
+        margin: 0;
+        font-size: 1.5em;
+        color: #333;
+    }
+    
+    i{
+        font-size: 1.2em;
+        color: #666;
+        transition: transform 0.2s ease;
+    }
+}
+
+.category-content{
+    margin-top: 10px;
+}
+
 .timespan{
     flex-shrink: 0;
     width: 180px;

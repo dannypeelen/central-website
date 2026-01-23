@@ -36,56 +36,39 @@ export default function Extras(){
           </div>
           <h2>Work Experience</h2>
 
-          {/* <div class="section">
+          <div class="section">
             <div class="icon">
             <img src={Microsoft} alt="MSFT Icon" class="icon"></img>
             </div>
             <div class="content">
-            <p><b>Software Engineer Intern</b></p>
+            <p><b>Software Engineer Intern (Incoming)</b></p>
             <p><i>Microsoft</i></p>
-            <p>Worked on Microsoft Word, incorporating LLM technologies for enhanced user experience.</p>
-            <p>Decreased latency by 10% using SDK-based agents to engage users and ensure productivity.</p>
+            <p>Will be working on Microsoft Word, incorporating LLM technologies for enhanced user experience.</p>
 
             </div>
             <div class="timespan">
               <p class="date">May 2026 - August 2026</p>
-              <p class="location">Seattle, WA</p>
+              <p class="location">Redmond, WA</p>
             </div>
-          </div> */}
+          </div>
 
-          {/* <div class="section">
-            <div class="icon">
-            <img src={CAI} alt="CharacterAI Icon" class="icon"></img>
-            </div>
-            <div class="content">
-            <p><b>AI Engineer Intern</b></p>
-            <p><i>Character AI</i></p>
-            <p>Built agentic AI systems using Retrieval-Augmented Generation (RAG) with LangChain, improving large language model reasoning and adaptability for internal Synopsys research projects.</p>
-            <p>Implemented and optimized backend services in Go (Golang) to enhance the scalability and responsiveness of RAG-driven AI tools, contributing to early-stage exploration of next-generation LLM applications at Synopsys.</p>
-
-            </div>
-            <div class="timespan">
-              <p class="date">January 2026 - April 2026</p>
-              <p class="location">Pittsburgh, PA</p>
-            </div>
-          </div> */}
-
-          {/* <div class="section">
+          <div class="section">
             <div class="icon">
             <img src={Synopsys} alt="Synopsys Icon" class="icon"></img>
             </div>
             <div class="content">
             <p><b>Software Engineer Intern</b></p>
             <p><i>Synopsys</i></p>
-            <p>Built agentic AI systems using Retrieval-Augmented Generation (RAG) with LangChain, improving large language model reasoning and adaptability for internal Synopsys research projects.</p>
-            <p>Implemented and optimized backend services in Go (Golang) to enhance the scalability and responsiveness of RAG-driven AI tools, contributing to early-stage exploration of next-generation LLM applications at Synopsys.</p>
+            <p>Built agentic AI systems using Retrieval-Augmented Generation (RAG) with LangChain, improving large language model reasoning and adaptability for internal Synopsys research projects.Architecting memory for Ansys Mechanical scripting RAG agent, reducing build time through context-aware code generation.</p>
+            <p>Implemented and optimized backend services in Go (Golang) to enhance the scalability and responsiveness of RAG-driven AI tools, contributing to early-stage exploration of next-generation LLM applications at Synopsys.Engineering scalable Go microservices with distributed caching, processing 10K+ daily queries with sub-200ms p99 latency.</p>
+            <p>Optimizing LLM retrieval pipelines via semantic tagging and hybrid search, improving code accuracy from 67% to 91%.</p>
 
             </div>
             <div class="timespan">
               <p class="date">January 2026 - April 2026</p>
               <p class="location">Pittsburgh, PA</p>
             </div>
-          </div> */}
+          </div>
 
           <div class="section">
             <div class="icon">
@@ -95,7 +78,7 @@ export default function Extras(){
               <p><b>Machine Learning Engineer Intern</b></p>
               <p><i>Thursday</i></p>
               <p>Built an Dockerized end-to-end recommendation pipeline (ingest data →build features →train model →serve)</p>
-              <p>Implemented CI/CD (GitHub Actions + Docker) and canary staging; added real-time monitoring to cut rollback time.</p>
+              <p>Architected web scrapers for 100+ sites, collecting data to train CV models and drive personalized trend recommendations.Implemented CI/CD (GitHub Actions + Docker) and canary staging; added real-time monitoring to cut rollback time.</p>
               <p>Integrated model endpoints into React frontend with &lt; 200ms latency per prediction, scaled system for ~10k MAUs.</p>
             </div>
             <div class="timespan">
@@ -111,9 +94,8 @@ export default function Extras(){
             <div class="content">
               <p><b>Software Engineering Intern</b></p>
               <p><i>PNC Financial Services Inc.</i></p>
-              <p>Built a Spring Boot + Angular micro-app from scratch to analyze housing data, set to be integrated into production.</p>
-              <p>Standardized error handling and refactored back-end logic, shipping changes biweekly in an Agile team.</p>
-              <p>Wrote Angular unit tests, raising coverage by 40% across the application to meet SonarQube requirements.</p>
+              <p>Built full-stack housing analytics micro-app (Spring Boot + Angular) processing 1M+ records of housing data for homeowners.Built a Spring Boot + Angular micro-app from scratch to analyze housing data, set to be integrated into production.</p>
+              <p>Standardized error handling across 15K+ lines and wrote Angular unit tests, increasing coverage by 40% across microservicesStandardized error handling and refactored back-end logic, shipping changes biweekly in an Agile team.</p>
             </div>
             <div class="timespan">
               <p class="date">May 2025 - Aug 2025</p>
@@ -185,9 +167,9 @@ export default function Extras(){
 
             </div>
             <div class="content">
-            <p><b>Programming Languages:</b> Python, Java, JavaScript, C/C++, SQL, HTML5, CSS</p>
+            <p><b>Programming Languages:</b> Python, Java, JavaScript,  C/C++, Go, OCaml, SQL, HTML5, CSS</p>
             <p><b>Libraries/Frameworks:</b> PyTorch, Docker, React, HuggingFace, NumPy, Pandas, Kafka, Angular, Hadoop, NodeJS, Spring Boot</p>
-            <p><b>Techincal Skills:</b>  Unit Testing, CI/CD, Deep Learning, Machine Learning, Natural Language Processing, APIs, A/B Testing</p>
+            <p><b>Techincal Skills:</b>  Deep Learning, Machine Learning, Data Science, Unit Testing, CI/CD, Git</p>
             <p><b>Languages:</b> English (native), Hungarian (advanced)</p>
             </div>
           </div>

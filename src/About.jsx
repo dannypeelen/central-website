@@ -13,6 +13,7 @@ export default function About(){
           <li><i class="bi bi-envelope"> </i><a href="mailto:dapeelen@gmail.com">dapeelen@gmail.com</a></li>
           <li><i class="bi bi-linkedin"> </i><a href="https://linkedin.com/in/daniel-peelen">LinkedIn</a></li>
           <li><i class="bi bi-github"> </i><a href="https://github.com/dannypeelen">GitHub</a></li>
+          <li><i class="bi bi-journal-text"> </i><a href="/blog" target="_blank">Blog</a></li>
           <li></li>
         </ul>
       </div>
