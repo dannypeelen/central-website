@@ -2,54 +2,66 @@ import React, { useState } from 'react';
 import { StrictMode } from 'react';
 import Gallery from './Gallery.jsx';
 import Home from './Home.jsx';
-import Compliment from './Compliments.jsx';
+import Calendar from './Calendar.jsx';
+import Countdown from './Countdown.jsx';
+
+const TABS = [
+    { id: 'home',      label: 'Home' },
+    { id: 'gallery',   label: 'Gallery' },
+    { id: 'calendar',  label: 'Daily Compliment' },
+    { id: 'countdown', label: 'Countdown' },
+];
 
 export default function Navbar() {
-  // State to keep track of the current page
-  const [currentPage, setCurrentPage] = useState("home");
+    const [currentPage, setCurrentPage] = useState('home');
+    const [animKey, setAnimKey] = useState(0);
 
-  const handleNavClick = (page, event) => {
-    event.preventDefault();
-    setCurrentPage(page);
-  };
+    const handleNavClick = (page, e) => {
+        e.preventDefault();
+        if (page !== currentPage) {
+            setCurrentPage(page);
+            setAnimKey(k => k + 1);
+        }
+    };
 
-  // Page components
-  const renderContent = () => {
-    switch (currentPage) {
-      case "home":
-        return (<StrictMode><Home /></StrictMode>);
-      case "gallery":
-        return (<StrictMode><Gallery /></StrictMode>);
-      case "compliment":
-        return (<StrictMode><Compliment /></StrictMode>);
-      default:
-        return <h1>Page Not Found</h1>;
-    }
-  };
+    const renderContent = () => {
+        switch (currentPage) {
+            case 'home':      return <StrictMode><Home /></StrictMode>;
+            case 'gallery':   return <StrictMode><Gallery /></StrictMode>;
+            case 'calendar':  return <StrictMode><Calendar /></StrictMode>;
+            case 'countdown': return <StrictMode><Countdown /></StrictMode>;
+            default:          return <h1>Page Not Found</h1>;
+        }
+    };
 
-  return (
-    <div>
-      <div class="buffer"/>
+    return (
+        <div>
+            <div className="buffer" />
 
-      <nav class="navbar">
-        <ul>
-          <li><a href="" onClick={(e) => handleNavClick("home", e)}>
-            Home
-          </a></li>
-          <li><a href="" onClick={(e) => handleNavClick("gallery", e)}>
-            Gallery
-          </a></li>
-          <li><a href="" onClick={(e) => handleNavClick("compliment", e)}>
-            Daily Compliment
-          </a></li>
-        </ul>
-      </nav>
+            <nav className="navbar">
+                <div className="navbar-brand">♡</div>
+                <ul>
+                    {TABS.map(({ id, label }) => (
+                        <li key={id}>
+                            <a
+                                href=""
+                                onClick={e => handleNavClick(id, e)}
+                                className={currentPage === id ? 'active' : ''}
+                            >
+                                {label}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </nav>
 
-      <div>{renderContent()}</div>
+            <div key={animKey} className="page-content fade-in">
+                {renderContent()}
+            </div>
 
-    <div class="bottom">
-      <p>© 2025 Danny Peelen. All Rights Reserved</p>
-    </div>
-    </div>
-  );
+            <div className="bottom">
+                <p>Made with love by Danny · 2025</p>
+            </div>
+        </div>
+    );
 }
