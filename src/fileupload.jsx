@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 
-function FileUpload(){
+function FileUpload() {
     const [selectedFile, setSelectedFile] = useState(null);
 
     const handleFileChange = (event) => {
-    setSelectedFile(event.target.files[0]);
+        setSelectedFile(event.target.files[0]);
     };
 
     const handleUpload = () => {
-    if (!selectedFile) {
-        alert("Please select a file!");
-        return;
-    }
-    if (selectedFile) {
-    // Send the file to your server using an API call
-    // ...
-    }
+        if (!selectedFile) {
+            alert("Please select a file!");
+            return;
+        }
+        if (selectedFile) {
+            // Send the file to your server using an API call
+            // ...
+        }
     };
 
     return (
