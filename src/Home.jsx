@@ -67,7 +67,7 @@ export default function App(){
 
                 <div class="section">
                   <div class="icon">
-                    <img src={pittImage} alt="pitt" class="icon"></img>
+                    <img src={GPT} alt="pitt" class="icon"></img>
                   </div>
                   <div class="content">
                     <div class="project-header">
