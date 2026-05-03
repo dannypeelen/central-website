@@ -27,6 +27,8 @@ export default function App(){
       <div class="updates">
         <h1>Updates</h1>
         <div class="updates-scroll">
+          <h4>05.03.2026</h4>
+          <p>Just finished up my Co-Op at Synopsys and my personal framework DannyTorch, so big changes to my resume!</p>
           <h4>11.09.2025</h4>
           <p>I have a few awesome project updates from attending HackHarvard in Boston and CalHacks in SF! I also re-vamped the resume page, since the UI seemed a little shaky.</p>
           <h4>08.25.2025</h4>
@@ -62,6 +64,26 @@ export default function App(){
             </button>
             {deepLearningOpen && (
               <div class="category-content">
+
+                <div class="section">
+                  <div class="icon">
+                    <img src={pittImage} alt="pitt" class="icon"></img>
+                  </div>
+                  <div class="content">
+                    <div class="project-header">
+                    <p><b>DannyTorch</b></p>
+                      <div class="project-links">
+                        <a href="https://github.com/dannypeelen/dannytorch" target="_blank"><i class="bi bi-github"></i></a>
+                        <i class="project-date">January - April 2026</i>
+                      </div>
+                    </div>
+                    <p><i>Tech: Python, NumPy, Deep Learning</i></p>
+                    <p>Built an ML framework from scratch with NumPy; built full reverse-mode autograd over arbitrary compute graphs.</p>            
+                    <p>Coded 10+ transformer parts including MHA, RoPE, LayerNorm, MLP with Dropout, Adam and more.</p>
+                    <p>Validated gradient correctness by training a character-level LM on n-gram tasks for 500 epochs on a Colab A100.</p>
+                  </div>
+                </div>
+
                 <div class="section">
                   <div class="icon">
                     <img src={Anki} alt="AnkiMate Icon" class="icon"></img>
@@ -70,7 +92,7 @@ export default function App(){
                     <div class="project-header">
                       <p><b>AnkiMate</b></p>
                       <div class="project-links">
-                        <a href="https://ankimate.dannypeelen.com/" target="_blank"><i class="bi bi-github"></i></a>
+                        <a href="#" target="_blank"><i class="bi bi-github"></i></a>
                         <i class="project-date">Releasing Soon</i>
                       </div>
                     </div>

@@ -59,9 +59,9 @@ export default function Extras(){
             <div class="content">
             <p><b>Software Engineer Intern</b></p>
             <p><i>Synopsys</i></p>
-            <p>Built agentic AI systems using Retrieval-Augmented Generation (RAG) with LangChain, improving large language model reasoning and adaptability for internal Synopsys research projects.Architecting memory for Ansys Mechanical scripting RAG agent, reducing build time through context-aware code generation.</p>
-            <p>Implemented and optimized backend services in Go (Golang) to enhance the scalability and responsiveness of RAG-driven AI tools, contributing to early-stage exploration of next-generation LLM applications at Synopsys.Engineering scalable Go microservices with distributed caching, processing 10K+ daily queries with sub-200ms p99 latency.</p>
-            <p>Optimizing LLM retrieval pipelines via semantic tagging and hybrid search, improving code accuracy from 67% to 91%.</p>
+            <p>Improved RAG coding agent accuracy by <b>105%</b> by designing a semantic clustering memory system.</p>
+            <p>Built a local multi-turn eval harness with bucket visualization to benchmark memory on Ansys test infrastructure.</p>
+            <p>Shipped memory solution to production by porting to Go and containerizing with feature-flag support.</p>
 
             </div>
             <div class="timespan">
@@ -77,9 +77,9 @@ export default function Extras(){
             <div class="content">
               <p><b>Machine Learning Engineer Intern</b></p>
               <p><i>Thursday</i></p>
-              <p>Built an Dockerized end-to-end recommendation pipeline (ingest data →build features →train model →serve)</p>
-              <p>Architected web scrapers for 100+ sites, collecting data to train CV models and drive personalized trend recommendations.Implemented CI/CD (GitHub Actions + Docker) and canary staging; added real-time monitoring to cut rollback time.</p>
-              <p>Integrated model endpoints into React frontend with &lt; 200ms latency per prediction, scaled system for ~10k MAUs.</p>
+              <p>Architected end-to-end production ML pipeline delivering personalized fashion recommendations to 10K MAUs.</p>
+              <p>Optimized inference endpoints with Redis caching and batching; achieved &lt;200ms latency on predictions.</p>
+              <p>Built distributed Kafka scraping infrastructure using 100+ sites to fuel CV model training pipelines at scale.</p>
             </div>
             <div class="timespan">
               <p class="date">Jun 2025 - Now</p>
@@ -94,8 +94,7 @@ export default function Extras(){
             <div class="content">
               <p><b>Software Engineering Intern</b></p>
               <p><i>PNC Financial Services Inc.</i></p>
-              <p>Built full-stack housing analytics micro-app (Spring Boot + Angular) processing 1M+ records of housing data for homeowners.Built a Spring Boot + Angular micro-app from scratch to analyze housing data, set to be integrated into production.</p>
-              <p>Standardized error handling across 15K+ lines and wrote Angular unit tests, increasing coverage by 40% across microservicesStandardized error handling and refactored back-end logic, shipping changes biweekly in an Agile team.</p>
+              <p>Built full-stack housing analytics app (Spring Boot, Angular) processing 1M+ records; raised test coverage by 40%.</p>
             </div>
             <div class="timespan">
               <p class="date">May 2025 - Aug 2025</p>
@@ -120,24 +119,21 @@ export default function Extras(){
             </div>
           </div>
 
+          <h2>Projects</h2>
+          
           <div class="section">
             <div class="icon">
-            <img src={pittImage} alt="Pitt Icon" class="icon"></img>
+              <img src={pittImage} alt="pitt" class="icon"></img>
             </div>
             <div class="content">
-            <p><b>Data Analyst</b></p>
-            <p><i>University of Pittsburgh Women's Volleyball Team</i></p>
-            <p>Coded 40+ matches and produced 25+ scouting reports alongside coaches, used for enhanced practice quality and match prep.</p>
-            <p>Implemented strategies to optimize practices in real-time, using constant communication to ensure maximum efficiency.</p>
-
-            </div>
-            <div class="timespan">
-              <p class="date"> Sep 2023 - Dec 2024</p>
-              <p class="location">Pittsburgh, PA</p>
+              <p><b>DannyTorch</b></p>
+              <p><i>Tech: Python, NumPy, Deep Learning</i></p>
+              <p>Built an ML framework from scratch with NumPy; built full reverse-mode autograd over arbitrary compute graphs.</p>            
+              <p>Coded 10+ transformer parts including MHA, RoPE, LayerNorm, MLP with Dropout, Adam and more.</p>
+              <p>Validated gradient correctness by training a character-level LM on n-gram tasks for 500 epochs on a Colab A100.</p>
             </div>
           </div>
 
-          <h2>Projects</h2>
           <div class="section">
             <div class="icon">
               <img src={Anki} alt="Anki Icon" class="icon"></img>

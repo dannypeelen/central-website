@@ -20,6 +20,8 @@ export default function About(){
       <div class="updates">
         <h1>Updates</h1>
         <div class="updates-scroll">
+          <h4>05.03.2026</h4>
+          <p>Just finished up my Co-Op at Synopsys and my personal framework DannyTorch, so big changes to my resume!</p>
           <h4>11.09.2025</h4>
           <p>I have a few awesome project updates from attending HackHarvard in Boston and CalHacks in SF! I also re-vamped the resume page, since the UI seemed a little shaky.</p>
           <h4>08.25.2025</h4>
