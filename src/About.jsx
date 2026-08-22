@@ -21,19 +21,19 @@ export default function About(){
         <h1>Updates</h1>
         <div class="updates-scroll">
           <h4>05.03.2026</h4>
-          <p>Just finished up my Co-Op at Synopsys and my personal framework DannyTorch, so big changes to my resume!</p>
+          <p>Just finished my Synopsys Co-Op and <a href="https://github.com/dannypeelen/dannytorch">DannyTorch</a></p>
           <h4>11.09.2025</h4>
-          <p>I have a few awesome project updates from attending HackHarvard in Boston and CalHacks in SF! I also re-vamped the resume page, since the UI seemed a little shaky.</p>
+          <p>Project updates from HackHarvard & CalHacks!</p>
           <h4>08.25.2025</h4>
-          <p>Last month I completed my internship at PNC! I am still continuing steadily with Thursday, a CMU startup. I have had a really fun time being head architect of this recommendation system they have. But now, back to school! Also updated a bunch of the UI to be more minimalist.</p>
+          <p>Completed PNC internship. Continuing with Thursday, a CMU startup.</p>
           <h4>04.30.2025</h4>
-          <p>I have been working on various language modeling interests, trying to learn different approaches and getting comfortable using PyTorch. As for the website, I have updated my project portfolio and improved the UI!</p>
+          <p>I have been working on language modeling, added new projects.</p>
           <h4>03.05.2025</h4>
-          <p>Updated my resume and gave some updates (projects & PNC internship)! Also tinkered with some style changes to improve the UI.</p>
+          <p>Updated my resume & project updates</p>
           <h4>01.08.2025</h4>
-          <p>Re-structured the site to include more of my portfolio and move parts! Flashcard maker is becoming a separate page.</p>
+          <p>Re-structured the site to include more of my portfolio and move parts!</p>
           <h4>12.27.2024</h4>
-          <p>I launched this site, with Flashcard maker in the works!</p>
+          <p>I launched this site.</p>
         </div>
       </div>
     </div>

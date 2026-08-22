@@ -35,13 +35,13 @@ export default function App() {
           <li><a href="" onClick={(e) => handleNavClick("home",e)}>
               <img src={myImage}></img>
             </a></li>
-          <li><a href="" onClick={(e) => handleNavClick("home", e)}>
+          <li><a href="" class={currentPage === "home" ? "active" : ""} onClick={(e) => handleNavClick("home", e)}>
             About Me
           </a></li>
-          <li><a href="" onClick={(e) => handleNavClick("extras", e)}>
+          <li><a href="" class={currentPage === "extras" ? "active" : ""} onClick={(e) => handleNavClick("extras", e)}>
             Portfolio
           </a></li>
-          <li><a href="" onClick={(e) => handleNavClick("resume", e)}>
+          <li><a href="" class={currentPage === "resume" ? "active" : ""} onClick={(e) => handleNavClick("resume", e)}>
             Resume
           </a></li>
         </ul>
