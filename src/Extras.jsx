@@ -36,8 +36,8 @@ function SweResume() {
         <div class="content">
           <p><b>Software Engineering Intern</b></p>
           <p><i>Microsoft</i></p>
-          <p>Analyzed 1,000,000+ Word Copilot crashes with Kusto and OpenTelemetry by building an LLM reliability agent.</p>
-          <p>Shipped an org-wide plug-in for Microsoft's internal Copilot, giving engineers on-demand crash analyses.</p>
+          <p>Shipped an org-wide plug-in for Microsoft's internal Copilot, reducing engineers' triage times by 60%.</p>
+          <p>Analyzed 1,000,000+ Word crashes daily with Kusto and OpenTelemetry by building a reliability AI agent.</p>
           <p>Fixed Word bugs surfaced by agent's output, eliminated 50,000+ enterprise-facing crashes over 2 releases.</p>
         </div>
         <div class="timespan">
@@ -219,8 +219,8 @@ function MleResume() {
         <div class="content">
           <p><b>Software Engineering Intern</b></p>
           <p><i>Microsoft</i></p>
-          <p>Analyzed 1,000,000+ Word Copilot crashes with Kusto and OpenTelemetry by building an LLM reliability agent.</p>
-          <p>Shipped an org-wide plug-in for Microsoft's internal Copilot, giving engineers on-demand crash analyses.</p>
+          <p>Shipped an org-wide plug-in for Microsoft's internal Copilot, reducing engineers' triage times by 60%.</p>
+          <p>Analyzed 1,000,000+ Word crashes daily with Kusto and OpenTelemetry by building a reliability AI agent.</p>
           <p>Fixed Word bugs surfaced by agent's output, eliminated 50,000+ enterprise-facing crashes over 2 releases.</p>
         </div>
         <div class="timespan">
