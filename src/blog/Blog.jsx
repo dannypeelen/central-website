@@ -8,8 +8,8 @@ export default function Blog() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Load posts from JSON
-    setPosts(postsData.posts || []);
+    // Load posts from JSON, hiding unpublished drafts
+    setPosts((postsData.posts || []).filter((p) => p.published !== false));
     setLoading(false);
 
     // Check if there's a post ID in the URL hash

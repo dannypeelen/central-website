@@ -1,6 +1,38 @@
 {
   "posts": [
     {
+      "id": "meditations-on-budapest",
+      "title": "Meditations on Budapest",
+      "date": "2026-10-30",
+      "published": false,
+      "excerpt": "",
+      "content": "<p>[Write here]</p><h2>First impressions</h2><p></p><h2>Settling in</h2><p></p><h2>What's stuck with me</h2><p></p>"
+    },
+    {
+      "id": "notes-on-deep-learning",
+      "title": "Notes on Deep Learning",
+      "date": "2026-10-30",
+      "published": false,
+      "excerpt": "",
+      "content": "<p>[Write here]</p><h2>The idea</h2><p></p><h2>What I tried</h2><p></p><h2>What I'd take away</h2><p></p>"
+    },
+    {
+      "id": "learning-hungarian",
+      "title": "Learning Hungarian",
+      "date": "2026-10-30",
+      "published": false,
+      "excerpt": "",
+      "content": "<p>[Write here]</p><h2>Where I started</h2><p></p><h2>What's been hard</h2><p></p><h2>Where I'm at now</h2><p></p>"
+    },
+    {
+      "id": "humanities-as-a-stem-major",
+      "title": "On the Humanities as a STEM Major",
+      "date": "2026-10-30",
+      "published": false,
+      "excerpt": "",
+      "content": "<p>[Write here]</p><h2>Why it matters</h2><p></p><h2>Where it shows up</h2><p></p>"
+    },
+    {
       "id": "a-summer-on-the-data-flywheel",
       "title": "A Summer on the Data Flywheel",
       "date": "2026-08-21",

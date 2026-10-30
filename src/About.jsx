@@ -58,7 +58,7 @@ export default function About(){
       </div>
       <div class="hu">
         <h1>Hungary</h1>
-        <p>My mother was born and raised in Budapest, Hungary before moving to the US for her PhD. My Hungarian roots and something I dearly treasure and is why I am minoring in Hungarian here at Pitt. I am currently advanced in Hungarian (around C2) and enjoy speaking any time I can. I also had the pleasure last summer to study abroad in Debrecen, where I learned about the History of Modern Hungary with Dr. Róbert Barta and Dr. István Rácz!</p>
+        <p>My mother was born and raised in Budapest, Hungary before moving to the US for her PhD. My Hungarian roots and something I dearly treasure and is why I am minoring in Hungarian here at Pitt. I am currently advanced in Hungarian (around B2) and enjoy speaking any time I can. I also had the pleasure last summer to study abroad in Debrecen, where I learned about the History of Modern Hungary with Dr. Róbert Barta and Dr. István Rácz!</p>
       </div>
     </div>
 

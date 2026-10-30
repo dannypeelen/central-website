@@ -219,23 +219,6 @@ export default function App(){
                     <p>Built at CalHacks, Mantis is a live-time surveillance tool geared towards small businesses. Mantis helps ensure activities such as shoplifiting or weapon-carrying are detected and store employees are alerted.</p>
                   </div>
                 </div>
-
-                <div class="section">
-                  <div class="icon">
-                    <img src={GPT} alt="Isabella Website Icon" class="icon"></img>
-                  </div>
-                  <div class="content">
-                    <div class="project-header">
-                      <p><b><a href="https://iloveisa.dannypeelen.com">Isabella Delahunty Website</a></b></p>
-                      <div class="project-links">
-                        <a href="https://iloveisa.dannypeelen.com" target="_blank"><i class="bi bi-github"></i></a>
-                        <i class="project-date">April 2025</i>
-                      </div>
-                    </div>
-                    <p><i>Tech: React (JavaScript), CSS, AWS</i></p>
-                    <p>For my girlfriend, Isa's, graduation and eventual departure to London to grad school, I built her a little website with a little photo gallery and a daily compliment for her found <a href="https://www.iloveisa.com">here.</a></p>
-                  </div>
-                </div>
               </div>
             )}
           </div>

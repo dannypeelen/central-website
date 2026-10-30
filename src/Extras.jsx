@@ -65,6 +65,22 @@ function SweResume() {
 
       <div class="section">
         <div class="icon">
+          <img src={Thursday} alt="Thursday Icon" class="icon"></img>
+        </div>
+        <div class="content">
+          <p><b>Machine Learning Engineer</b></p>
+          <p><i>Thursday (Carnegie Mellon startup)</i></p>
+          <p>Shipped Monolith-based recommender to 10K monthly users on Kafka, PyFlink, and Redis, serving under 200ms.</p>
+          <p>Built a thread-safe Cuckoo hash feature and embedding store from scratch, feeding a PyTorch DeepFM ranker.</p>
+        </div>
+        <div class="timespan">
+          <p class="date">June 2025 - December 2025</p>
+          <p class="location">Pittsburgh, PA</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="icon">
           <img src={PNC} alt="PNC Icon" class="icon"></img>
         </div>
         <div class="content">
@@ -79,22 +95,6 @@ function SweResume() {
         </div>
       </div>
 
-      <div class="section">
-        <div class="icon">
-          <img src={pittImage} alt="Pitt Icon" class="icon"></img>
-        </div>
-        <div class="content">
-          <p><b>Teaching Assistant</b></p>
-          <p><i>University of Pittsburgh</i></p>
-          <p>Led recitations and practices for 100+ students in Discrete Math, raised average final scores from 78 to 84.</p>
-          <p>Held 5+ hours of weekly office hours, coaching students on proof techniques and algorithmic thinking.</p>
-        </div>
-        <div class="timespan">
-          <p class="date">August 2024 - April 2025</p>
-          <p class="location">Pittsburgh, PA</p>
-        </div>
-      </div>
-
       <h2>Projects</h2>
 
       <div class="section">
@@ -104,9 +104,8 @@ function SweResume() {
         <div class="content">
           <p><b>DannyTorch</b></p>
           <p><i>Tech: Python, NumPy</i></p>
-          <p>Designed deep learning framework in pure NumPy without AI, building an autograd engine over a dynamic graph.</p>
-          <p>Implemented full transformer stack (MHA with causal masking, RoPE, RMSNorm, SwiGLU) behind a module API.</p>
-          <p>Verified all autograd ops against gradients, then trained a small LM on one A100, cutting loss from 4.9 to 1.2.</p>
+          <p>Built a deep learning framework in pure NumPy without AI with reverse-mode autograd over a dynamic graph.</p>
+          <p>Hand-wrote a decoder-only transformer and trained a 604K-param LM on it, cutting loss from 4.9 to 1.2.</p>
         </div>
         <div class="timespan">
           <p class="date">2026</p>
@@ -119,7 +118,7 @@ function SweResume() {
         </div>
         <div class="content">
           <p><b>GhostPIN — 2nd Place, HackHarvard 2025</b></p>
-          <p><i>Tech: Node.js, Redis, PostgreSQL, WebAuthn</i></p>
+          <p><i>Tech: Node.js, TypeScript, Redis, PostgreSQL, WebAuthn</i></p>
           <p>Designed an anti-phishing SDK with RSA-signed protocol and origin-bound nonces that block fake checkout pages.</p>
           <p>Integrated biometric MFA into checkout flow via WebAuthn, with approvals verified end-to-end in under 200ms.</p>
         </div>
@@ -128,31 +127,24 @@ function SweResume() {
         </div>
       </div>
 
+      <h2>Leadership</h2>
+
       <div class="section">
         <div class="icon">
-          <img src={GPT} alt="Mantis Icon" class="icon"></img>
+          <img src={pittImage} alt="Pitt Icon" class="icon"></img>
         </div>
         <div class="content">
-          <p><b>Mantis — 2nd Place, CalHacks 2025</b></p>
-          <p><i>Tech: Python, OpenCV, YOLOv8, GCP, Twilio</i></p>
-          <p>Built a full-stack surveillance platform detecting theft and weapons in live feeds with real-time owner alerts.</p>
-          <p>Architected a Python detection core streaming over WebSockets into a reactive Next.js/Convex dashboard on GCP.</p>
+          <p><b>Teaching Assistant</b></p>
+          <p><i>University of Pittsburgh</i></p>
+          <p>Led recitations and practices for 100+ students in Discrete Math, raised average final scores from 78 to 84.</p>
+          <p>Held 8+ hours of weekly office hours, coaching 50+ students on proof techniques and algorithmic thinking.</p>
         </div>
         <div class="timespan">
-          <p class="date">2025</p>
+          <p class="date">August 2024 - April 2025</p>
+          <p class="location">Pittsburgh, PA</p>
         </div>
       </div>
-      <h2>Skills</h2>
-      <div class="section">
-        <div class="icon"></div>
-        <div class="content">
-          <p><b>Languages:</b> Python, C/C++, Java, Go, TypeScript, JavaScript, SQL, OCaml</p>
-          <p><b>Machine Learning & AI:</b> PyTorch, NumPy, HuggingFace, transformers, model evals, benchmarking</p>
-          <p><b>Cloud & DevOps:</b> AWS, GCP, Azure DevOps, Docker, Linux, Git</p>
-          <p><b>Backend & Frontend:</b> Spring Boot, Kafka, Redis, React, Angular</p>
-        </div>
-      </div>
-      <h2>Leadership</h2>
+
       <div class="section">
         <div class="icon">
           <img src={SteelHacks} alt="SteelHacks Icon" class="icon"></img>
@@ -171,7 +163,7 @@ function SweResume() {
       <div class="section">
         <div class="icon"></div>
         <div class="content">
-          <p><b>Technical Team Member, Google Developer Group</b></p>
+          <p><b>Technical Team Leader, Google Developer Group</b></p>
           <p><i>Budapest University of Technology and Economics</i></p>
           <p>Led team of engineers to build myBME for students and co-organize guest tech lectures while studying abroad.</p>
         </div>
@@ -180,11 +172,14 @@ function SweResume() {
           <p class="location">Budapest, Hungary</p>
         </div>
       </div>
-      <h2>Citizenship</h2>
+      <h2>Technical Skills</h2>
       <div class="section">
         <div class="icon"></div>
         <div class="content">
-          <p><b>USA, Hungary</b></p>
+          <p><b>Languages:</b> Python, C/C++, Java, Go, TypeScript, JavaScript, SQL, HTML/CSS, OCaml</p>
+          <p><b>Machine Learning & AI:</b> PyTorch, NumPy, HuggingFace, transformers, model evals, benchmarking</p>
+          <p><b>Cloud & DevOps:</b> AWS, Google Cloud Platform, Azure DevOps, Docker, Linux, Git, CI/CD, Agile, Firebase</p>
+          <p><b>Backend & Frontend:</b> Node.js, Flask, Spring Boot, Kafka, Redis, React, Angular, JUnit, Maven, Gradle</p>
         </div>
       </div>
     </>
